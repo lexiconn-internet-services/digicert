@@ -1,0 +1,36 @@
+{
+  "name": "lexiconn-internet-services/digicert",
+  "version": "0.0.1",
+  "description": "Digicert API library for PHP",
+  "type": "library",
+  "require": {
+    "php": "^7.4",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "John F. Chamberlain",
+      "email": "john.f.chamberlain@gmail.com"
+    }
+  ],
+  "homepage": "https://www.lexiconn.com",
+  "autoload": {
+    "files": [],
+    "psr-4": {
+      "LexiConn\\DigiCert\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LexiConn\\DigCert\\ServiceProvider"
+      ],
+      "aliases": {
+        "DigiCert": "Digicert"
+      }
+    }
+  }
+}
