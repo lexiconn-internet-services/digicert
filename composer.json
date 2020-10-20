@@ -19,7 +19,7 @@
   "autoload": {
     "files": [],
     "psr-4": {
-      "LexiConn\\DigiCert\\": "src/"
+      "LexiConnInternetServices\\DigiCert\\": "src/"
     }
   },
   "minimum-stability": "dev",
@@ -27,7 +27,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "LexiConnInternetServices\\DigCert\\ServiceProvider"
+        "LexiConnInternetServices\\DigCert\\DigicertServiceProvider"
       ],
       "aliases": {
         "DigiCert": "Digicert"
