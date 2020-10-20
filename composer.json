@@ -5,7 +5,8 @@
   "type": "library",
   "require": {
     "php": "^7.4",
-    "guzzlehttp/guzzle": "^7.0"
+    "guzzlehttp/guzzle": "^7.0",
+    "illuminate/support": "8.*"
   },
   "license": "MIT",
   "authors": [
@@ -26,7 +27,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "LexiConn\\DigCert\\ServiceProvider"
+        "LexiConnInternetServices\\DigCert\\ServiceProvider"
       ],
       "aliases": {
         "DigiCert": "Digicert"
