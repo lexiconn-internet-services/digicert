@@ -27,5 +27,8 @@ class DigiCertServiceProvider extends BaseServiceProvider
             __DIR__.'/config/digicert.php',
             'digicert'
         );
+        $this->app->singleton(RateLimterService::class, function ($app) {
+            return new RateLimterService(config('digicert.rate_limit', 950), config('digicert.rate_interval', 300));
+        });
     }
 }

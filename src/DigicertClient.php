@@ -7,6 +7,7 @@ use GuzzleHttp\Client as HttpClient;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use LexiConnInternetServices\DigiCert\Exceptions\MissingApiKeyException;
+use LexiConnInternetServices\DigiCert\Facades\RateLimiter;
 
 /**
  * Class Client
@@ -143,6 +144,7 @@ class DigicertClient
             'RequestURI' => $this->requestUri,
             'Options'    => $this->options,
         ]);
+        RateLimiter::checkLimit();
         $request = $client->request($this->requestMethod, $this->requestUri, $this->options);
         
         return json_decode($request->getBody());
